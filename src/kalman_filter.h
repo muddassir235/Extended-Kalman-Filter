@@ -64,6 +64,18 @@ public:
    */
   void UpdateEKF(const Eigen::VectorXd &z);
 
+   /**
+   * Gets the given angle between pi and minus pi
+   * @param f angle
+   */
+  float pi_to_minus_pi(float f);
+
+  /**
+   * get h(x) for { y = z - h(x) }
+   * @param x angle
+   */
+  Eigen::VectorXd getH_x(const Eigen::VectorXd &x);
+
 };
 
 #endif /* KALMAN_FILTER_H_ */
